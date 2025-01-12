@@ -1,0 +1,9 @@
+node_modules/
+.pnpm-store/
+dist/
+target/
+.env
+.DS_Store
+.idea/
+.vscode/
+coverage/
