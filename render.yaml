@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: careflow-api
+    runtime: docker
+    plan: free
+    region: ohio
+    branch: main
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: free
+      - key: DATABASE_URL
+        sync: false
+      - key: POSTGRES_USER
+        sync: false
+      - key: POSTGRES_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MINIO_ENDPOINT
+        sync: false
+      - key: MINIO_ROOT_USER
+        sync: false
+      - key: MINIO_ROOT_PASSWORD
+        sync: false
+      - key: MINIO_REGION
+        sync: false
+      - key: MINIO_BUCKET
+        value: careflow-documents
+      - key: CORS_ALLOWED_ORIGIN_PATTERNS
+        value: https://*.pages.dev

@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    listener:
+      auto-startup: false
+management:
+  health:
+    kafka:
+      enabled: false
+    redis:
+      enabled: false
