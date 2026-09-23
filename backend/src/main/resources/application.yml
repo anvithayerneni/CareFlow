@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 spring:
   application:
     name: careflow-api
@@ -40,10 +40,13 @@ management:
       probes:
         enabled: true
 careflow:
+  cors:
+    allowed-origin-patterns: ${CORS_ALLOWED_ORIGIN_PATTERNS:https://*.pages.dev,http://localhost:5173}
   storage:
     endpoint: ${MINIO_ENDPOINT:http://localhost:9000}
     access-key: ${MINIO_ROOT_USER:careflow}
     secret-key: ${MINIO_ROOT_PASSWORD:careflow_local_only}
+    region: ${MINIO_REGION:us-east-1}
     bucket: careflow-documents
   jwt:
     secret: ${JWT_SECRET:local-demo-secret-change-this-to-a-32-character-key}

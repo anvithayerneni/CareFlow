@@ -16,6 +16,10 @@ CareFlow is a **synthetic-data portfolio demonstration**, not a clinical system.
 
 The frontend includes a demo workspace with a role switcher. Seeded demo accounts use `sophie@example.test`, `maya@example.test`, and `admin@example.test` with the shared local-only password `CareFlowDemo2024!`. API requests target `/api/v1`; Vite proxies them to port 8080. API docs are at `/swagger-ui.html`, and health is exposed through `/actuator/health`.
 
+## Free online demo
+
+The project includes a free-tier deployment guide in [`docs/free-deployment.md`](docs/free-deployment.md). Its free profile keeps the UI, API, PostgreSQL, private file storage, and booking notifications working without Redis or Kafka. Free services may sleep or pause when inactive; this is a portfolio demo, not a clinical system.
+
 ## Architecture and safety notes
 
 The backend is a domain-organized modular monolith. Controllers validate and translate HTTP requests; services own workflows; repositories own persistence. Flyway migrations establish UUID keys, foreign keys, indexes, and a database-level exclusion constraint to prevent overlapping active appointments for a doctor. Files are represented as object-storage metadata; binary payloads must be stored in MinIO/S3, never in PostgreSQL.

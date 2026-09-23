@@ -3,10 +3,12 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.UUID;
 @Component
+@Profile("!free")
 public class AppointmentNotificationConsumer {
  private final JdbcTemplate db; private final ObjectMapper json;
  public AppointmentNotificationConsumer(JdbcTemplate db,ObjectMapper json){this.db=db;this.json=json;}
