@@ -25,8 +25,6 @@ The frontend includes a demo workspace with a role switcher. Seeded demo account
 
 ## Free online demo
 
-**Live demo:** [CareFlow on Render](https://careflow-frontend-bzw3.onrender.com/)
-
 The project includes a free-tier deployment guide in [`docs/free-deployment.md`](docs/free-deployment.md). Its free profile keeps the UI, API, PostgreSQL, private file storage, and booking notifications working without Redis or Kafka. Free services may sleep or pause when inactive; this is a portfolio demo, not a clinical system.
 
 ## Architecture and safety notes
