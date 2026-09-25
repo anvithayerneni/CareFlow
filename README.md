@@ -1,5 +1,12 @@
 # CareFlow
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-careflow--frontend.onrender.com-00B4D8?style=for-the-badge&logo=render&logoColor=white)](https://careflow-frontend-bzw3.onrender.com/)
+[![CI](https://img.shields.io/github/actions/workflow/status/anvithayerneni/CareFlow/ci.yml?style=for-the-badge&label=CI)](https://github.com/anvithayerneni/CareFlow/actions)
+
+> 🚀 **Live Demo:** **[https://careflow-frontend-bzw3.onrender.com/](https://careflow-frontend-bzw3.onrender.com/)**
+>
+> Experience the interactive patient, doctor, and admin workspaces directly in your browser.
+
 CareFlow is a **synthetic-data portfolio demonstration**, not a clinical system. It provides a patient, clinician, and administrator workflow for exploring scheduling and care operations. Do not enter real patient information. The informational assistant does not diagnose or recommend treatment.
 
 ## Stack
